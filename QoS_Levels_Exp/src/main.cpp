@@ -7,7 +7,7 @@
 #include "secrets/wifi.h"
 // #include <mqtt_client.h> // native esp-idf mqtt client for more control, e.g. QoS 2.
 
-// WiFi: they are in secrets/wifi; if not please uncomment and provide them below
+// WiFi: they are in secrets/wifi.h; if not please uncomment and provide them below
 // const char *ssid = "xxxxx"; // Enter your Wi-Fi name
 // const char *password = "xxxxx";  // Enter Wi-Fi password
 
@@ -27,7 +27,7 @@ void mqttCallback(char *topic, byte *payload, unsigned int length)
     }
     Serial.println();
 }
-// MQTT crendentials: can be found in secrets/mqtt, if not found please uncomment and provide them below
+// MQTT crendentials: can be found in secrets/mqtt.h, if not found please uncomment and provide them below
 // const char *mqtt_broker = "broker.emqx.io";
 // const char *topic = "emqx/esp32";
 // const int mqtt_port = 1883;
@@ -98,7 +98,7 @@ void setup()
     Serial.println("Publishing 100 messages to the echo topic ...");
     for (int i = 0; i < 100; i++) // 100 messages
     {
-        mqttClient.publish(echo_topic, String(i).c_str(), false);
+        mqttClient.publish(echo_topic, String(i).c_str(), true);
         delay(1); // 1 ms one message
     }
     mqttClient.loop();
@@ -110,15 +110,15 @@ void setup()
      * - Scenario: subcribe to the retained_topic AFTER publishing to see the retained message.
      * - Publish a non-retained message to non_retained_topic, THEN subsribe to non_retained_topic --> see NO message.
      */
-    mqttClient.publish(retained_topic, "This is a retained message", true);
-    mqttClient.subscribe(retained_topic);
-    mqttClient.loop();
-    // Publish a non-retained message
-    Serial.println("Publish a non-retained message");
-    mqttClient.publish(non_retained_topic, "This is a non-retained message", false);
-    mqttClient.subscribe(non_retained_topic);
-    Serial.println("Subscribed to non-retained topic ...");
-    mqttClient.loop();
+    // mqttClient.publish(retained_topic, "This is a retained message", true);
+    // mqttClient.subscribe(retained_topic);
+    // mqttClient.loop();
+    // // Publish a non-retained message
+    // Serial.println("Publish a non-retained message");
+    // mqttClient.publish(non_retained_topic, "This is a non-retained message", false);
+    // mqttClient.subscribe(non_retained_topic);
+    // Serial.println("Subscribed to non-retained topic ...");
+    // mqttClient.loop();
     // Serial.println("Expected: No message from the non-retained topic");
 
     /**
