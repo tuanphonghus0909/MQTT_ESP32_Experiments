@@ -6,6 +6,10 @@
 		{
 			"name": "QoS_Levels_Exp",
 			"path": "QoS_Levels_Exp"
+		},
+		{
+			"name": "Wifi_Connect_Experiment",
+			"path": "Wifi_Connect_Experiment"
 		}
 	],
 	"settings": {}

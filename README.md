@@ -14,4 +14,11 @@ Gợi ý nâng cao:
 
 ---
 
+## Thí nghiệm 1: Echo Test 
+
+
+## Thí nghiệm 2: Retained Messages 
+
+## Thí nghiệm 3: LWT and KeepAlive
+
 
