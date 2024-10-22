@@ -33,7 +33,7 @@ inline void setup_wifi_multi()
 inline void setup_wifi(const uint8_t AP_index = 1)
 {
     delay(10);
-    Serial.printf("Connecting to %s ", ssid[AP_index]);
+    Serial.printf("Connecting to %s ", WiFiConnect::ssid[AP_index]);
     WiFi.begin(WiFiConnect::ssid[AP_index], WiFiConnect::pass[AP_index]);
     while (WiFi.status() != WL_CONNECTED)
     {

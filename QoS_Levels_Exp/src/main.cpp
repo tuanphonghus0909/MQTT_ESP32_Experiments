@@ -47,7 +47,7 @@ inline void setup_wifi(const char *SSID, const char *PASS)
         delay(500);
         Serial.print(".");
     }
-    Serial.printf("\nConnected to SSID: '%s'\n", WiFi.SSID().c_str());
+    Serial.printf("\r\nConnected to SSID: '%s'\r\n", WiFi.SSID().c_str());
     Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
 }
@@ -61,7 +61,7 @@ inline void connect_mqtt(PubSubClient &client, const char *address, const int po
     {
         String client_id = "esp32-client-";
         client_id += String(WiFi.macAddress());
-        Serial.printf("The client %s connects to the public MQTT broker\n", client_id.c_str());
+        Serial.printf("The client %s connects to the public MQTT broker\r\n", client_id.c_str());
         // Connect to the MQTT broker with LWT (Last Will and Testament):
         if (client.connect(client_id.c_str(), mqtt_username, mqtt_password, lwt_topic, 2, true, "offline"))
         {
