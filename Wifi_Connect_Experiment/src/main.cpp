@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "WiFiFSM.h"
 #include "LED.h"
-#include "secrets/wifi.h"
+#include "secrets/wifi.h" // namespace WiFiSecrets
 
 namespace
 {

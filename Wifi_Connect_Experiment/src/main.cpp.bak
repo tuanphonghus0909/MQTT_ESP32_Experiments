@@ -4,8 +4,8 @@
 
 namespace
 {
-    const char *WF_SSID = ssid;
-    const char *WF_PASS = password;
+    const char *WF_SSID = WiFiSecrets::ssid;
+    const char *WF_PASS = WiFiSecrets::pass;
 }
 
 void setup()
