@@ -10,6 +10,10 @@
 		{
 			"name": "Wifi_Connect_Experiment",
 			"path": "Wifi_Connect_Experiment"
+		},
+		{
+			"name": "WiFi_Disconnect_QoS0_Publishing",
+			"path": "WiFi_Disconnect_QoS0_Publishing"
 		}
 	],
 	"settings": {}
