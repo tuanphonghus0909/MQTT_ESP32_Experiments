@@ -16,6 +16,8 @@ namespace
     const char *password = WiFiSecrets::pass;
     const char *echo_topic = "esp32/echo_test";
     unsigned int publish_count = 0;
+    uint16_t keepAlive = 15;    // seconds (default is 15)
+    uint16_t socketTimeout = 5; // seconds (default is 15)
 }
 
 WiFiClientSecure tlsClient;
@@ -56,7 +58,7 @@ void mqttReconnect()
         }
         else
         {
-            Serial.print("failed, rc=");
+            Serial.print("MTTT connect failed, rc=");
             Serial.print(mqttClient.state());
             Serial.println(" try again in 1 seconds");
             delay(1000);
@@ -70,6 +72,10 @@ void setup()
     delay(10);
     setup_wifi(ssid, password);
     tlsClient.setCACert(ca_cert);
+
+    // mqttClient.setKeepAlive(keepAlive); // To see how long mqttClient detects the TCP connection is lost
+    // mqttClient.setSocketTimeout(socketTimeout); // To see how long mqttClient detects the TCP connection is lost
+
     mqttClient.setCallback(mqttCallback);
     mqttClient.setServer(MQTT::broker, MQTT::port);
     mqttPulishTicker.attach(1, mqttPublish);
