@@ -54,7 +54,7 @@ Quan sát thông điệp in ra theo thời gian ta thấy một vài điều th�
 - Như trên **Hình 3** việc kết nối MQTT khôi phục mất khoảng 3s sau khi kết nối WiFi khôi phục (không in thông điệp kết nối WiFi connected do logic của mã thí nghiệm). 
 - Note: điều này cũng chứng tỏ là thư viện WiFi.h của ESP32 trên Arduino Core nó sẽ tự động xử lý việc kết nối WiFi lại một cách im lặng, không cần người dùng phải viết mã. Nếu muốn bạn có thể tự nghiên cứu kỹ hơn về hiện tượng này bằng mã trong thư mục thí nghiệm "Wifi_Connect_Experiment" cùng trên Repo này. 
 
-![Hình 3](./images/hinh1.png "Hình 3")
+![Hình 3](./images/hinh3.png "Hình 3")
 **Hình 3**
 
 ## Side Note về việc sử dụng Wokwi simulator trên VS code
