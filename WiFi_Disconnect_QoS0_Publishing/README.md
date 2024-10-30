@@ -33,7 +33,6 @@ Quan sát thông điệp in ra theo thời gian ta thấy một vài điều th�
 **Hình 1**
 
 1. Thư viện PubSubClient có thể gọi hàm publish trước khi thiết lập kết nối thành công với broker
-- **Hình 1** cho thấy: có ba thông điệp được "publish" là 0, 1, 2 trước cả khi MQTT kết nối thành công
 - Sau khi kết nối WiFi thành công, thì `Attempting MQTT connection...` mất khoảng 3s để thiết lập kết nối (mỗi lần publish là 1s).
 
 2. Thông điệp đầu tiên mà ESP32 nhận được từ broker chính là cái `retained message` từ lần thí nghiệm trước (số 99):
