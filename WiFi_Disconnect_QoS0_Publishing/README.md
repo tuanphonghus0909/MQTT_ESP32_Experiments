@@ -28,7 +28,7 @@
 ## Kết quả
 Quan sát thông điệp in ra theo thời gian ta thấy một vài điều thú vị ngoài dự kiến như sau:
 
-![image](https://github.com/user-attachments/assets/26917a2c-85d2-4059-8efd-b8146a407566)
+![Hình 1](https://github.com/user-attachments/assets/6693fd8c-4066-416a-982b-b87a3fd0f2fb)
 
 **Hình 1**
 
@@ -44,8 +44,7 @@ Quan sát thông điệp in ra theo thời gian ta thấy một vài điều th�
 - Điều này không có gì lạ, vì khi mội kết nối được thiết lập thì lớp TCP/IP truyền thông điệp rất tốt 
 - Không quan sát thấy bị mất gói tin lần nào kể cả việc publish và subscribe với QoS = 0. 
 
-![Hình 2](https://github.com/user-attachments/assets/6693fd8c-4066-416a-982b-b87a3fd0f2fb)
-
+![Hình 2](https://github.com/user-attachments/assets/5cdb4573-7015-4658-8940-fd6867873ff3)
 **Hình 2**
 
 4. Khi ngắt điểm phát WiFi (AP):
@@ -60,7 +59,6 @@ Quan sát thông điệp in ra theo thời gian ta thấy một vài điều th�
 - Note: điều này cũng chứng tỏ là thư viện WiFi.h của ESP32 trên Arduino Core nó sẽ tự động xử lý việc kết nối WiFi lại một cách im lặng, không cần người dùng phải viết mã. Nếu muốn bạn có thể tự nghiên cứu kỹ hơn về hiện tượng này bằng mã trong thư mục thí nghiệm "Wifi_Connect_Experiment" cùng trên Repo này. 
 
 ![Hình 3](https://github.com/user-attachments/assets/1f4a897e-b3d0-4882-8c02-76088e85a4c6)
-
 **Hình 3**
 
 ## Kết luận 
