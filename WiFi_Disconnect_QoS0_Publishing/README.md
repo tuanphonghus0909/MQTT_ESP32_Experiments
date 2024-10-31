@@ -44,7 +44,8 @@ Quan sát thông điệp in ra theo thời gian ta thấy một vài điều th�
 - Điều này không có gì lạ, vì khi mội kết nối được thiết lập thì lớp TCP/IP truyền thông điệp rất tốt 
 - Không quan sát thấy bị mất gói tin lần nào kể cả việc publish và subscribe với QoS = 0. 
 
-![Hình 2](./images/hinh2.png "Hình 2")
+![Hình 2](https://github.com/user-attachments/assets/6693fd8c-4066-416a-982b-b87a3fd0f2fb)
+
 **Hình 2**
 
 4. Khi ngắt điểm phát WiFi (AP):
@@ -55,10 +56,11 @@ Quan sát thông điệp in ra theo thời gian ta thấy một vài điều th�
 - Tra cứu trên docs của PubSubClient thì thấy lỗi này có nghĩa là: `-2 : MQTT_CONNECT_FAILED - the network connection failed`
 - .. điều này có nghĩa là tới lúc này thì MQTT Client phát hiện ra mất kết nối mạng (sau 15s) và tiến hành kết nối lại.
 - Việc kết nối lại không thành công cho đến khi ta bật điểm phát WiFi lại.
-- Như trên **Hình 3** việc kết nối MQTT khôi phục mất khoảng 3s sau khi kết nối WiFi khôi phục (không in thông điệp kết nối WiFi connected do logic của mã thí nghiệm). 
+- Như trên **Hình 3** việc kết nối MQTT khôi phục mất khoảng 1s sau khi kết nối WiFi khôi phục (không in thông điệp kết nối WiFi connected do logic của mã thí nghiệm). 
 - Note: điều này cũng chứng tỏ là thư viện WiFi.h của ESP32 trên Arduino Core nó sẽ tự động xử lý việc kết nối WiFi lại một cách im lặng, không cần người dùng phải viết mã. Nếu muốn bạn có thể tự nghiên cứu kỹ hơn về hiện tượng này bằng mã trong thư mục thí nghiệm "Wifi_Connect_Experiment" cùng trên Repo này. 
 
-![image](https://github.com/user-attachments/assets/0f9d5c9c-f746-4b70-824d-596d47beff89)
+![Hình 3](https://github.com/user-attachments/assets/1f4a897e-b3d0-4882-8c02-76088e85a4c6)
+
 **Hình 3**
 
 ## Kết luận 
